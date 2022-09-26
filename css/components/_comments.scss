@@ -1,0 +1,107 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+.post-navigation {
+  div.nav-links {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    column-gap: 50px;
+
+    div {
+      background-color: $dk-grey;
+      padding: 8px 20px;
+      border: 1px solid $dk-grey;
+      transition: 0.2s ease;
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+
+        .post-title {
+          display: flex;
+          align-items: center;
+          column-gap: 5px;
+        }
+      }
+
+      &:hover {
+        background-color: #ffffff;
+        cursor: pointer;
+
+        a {
+          color: $dk-grey;
+        }
+      }
+    }
+  }
+}
+
+.comments-block {
+  padding-top: 50px;
+
+  div#respond {
+    h3 {
+      font-family: $alumni;
+      font-size: 2.5em;
+      font-weight: 400;
+      padding-bottom: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      p.comment-notes {
+        padding-bottom: 6px;
+        font-family: $overpass;
+        font-size: 0.8em;
+        color: $dk-grey;
+        font-weight: 300;
+      }
+
+      p.comment-form-comment,
+      p.comment-form-author,
+      p.comment-form-email,
+      p.comment-form-url {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        padding-bottom: 10px;
+
+        label {
+          padding-bottom: 5px;
+          font-family: $overpass;
+          font-weight: 400;
+          font-size: 1em;
+          color: $dk-grey;
+        }
+      }
+
+      p.comment-form-url,
+      p.comment-form-cookies-consent {
+        display: none;
+        visibility: hidden;
+      }
+
+      p.form-submit {
+        margin-top: 10px;
+
+        input {
+          padding: 8px 30px;
+          border: none;
+          background-color: $dk-grey;
+          color: #ffffff;
+          border: 1px solid $dk-grey;
+          transition: 0.2s ease;
+
+          &:hover {
+            cursor: pointer;
+            color: $dk-grey;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

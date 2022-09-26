@@ -1,0 +1,80 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+div.about-heading {
+  padding-left: 8%;
+  padding-right: 5%;
+  min-height: 40vh;
+
+  p {
+    font-family: $overpass;
+    color: $dk-grey;
+    font-weight: 300;
+    font-size: 1.1em;
+  }
+}
+
+div.wp-container-8,
+div.wp-container-13 {
+  gap: 5em !important;
+  justify-content: center;
+}
+
+div.staff-block {
+  display: flex;
+  flex-direction: row;
+  min-height: 180px;
+  max-width: 410px;
+
+  .wp-block-group {
+    color: #ffffff;
+    padding-left: 15px;
+
+    h4 {
+      font-family: $alumni;
+      font-size: 1.5em;
+      font-weight: 600;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    h5 {
+      font-family: $alumni;
+      font-size: 1.2em;
+      font-weight: 400;
+      padding-top: 2px;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-family: $overpass;
+      font-size: 1em;
+      font-weight: 300;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  figure {
+    min-width: 140px;
+
+    img {
+      min-height: 140px;
+      min-width: 140px;
+    }
+  }
+}
+
+div.about-form-map {
+  justify-content: center;
+  width: 100%;
+  column-gap: 5em;
+
+  div {
+    max-width: 450px;
+
+    .wpforms-container {
+      width: 300px;
+    }
+  }
+}

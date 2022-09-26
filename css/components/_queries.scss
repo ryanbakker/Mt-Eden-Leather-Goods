@@ -1,0 +1,136 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+@media screen and (max-width: 781px) {
+  div.wp-container-5 {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  div.wp-container-10 {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  div.wp-container-15 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-height: 65vh;
+  }
+
+  div.wp-container-14 {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    min-height: 320px;
+
+    h3 {
+      margin: auto;
+    }
+  }
+
+  div.wp-container-13 {
+    display: flex;
+    align-items: center !important;
+    flex-direction: column;
+    min-height: 120px;
+
+    div {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .banner-content {
+    min-width: 0px !important;
+    p {
+      width: 90% !important;
+      min-width: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .wp-container-13 div {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .wpforms-container .wpforms-form .wpforms-field-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .wpforms-container .wpforms-form .wpforms-field-container {
+    max-width: 260px;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  footer {
+    flex-direction: column;
+    row-gap: 50px;
+    padding-top: 60px;
+
+    .footer-content {
+      margin: auto;
+    }
+  }
+
+  footer .footer-content ul {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .service-post {
+    img {
+      min-width: 296px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  div.service-post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .service-post img {
+    padding-bottom: 15px;
+    height: 23rem;
+  }
+
+  .service-post .service-post-text {
+    padding-left: 0;
+  }
+
+  .service-post-text p {
+    max-width: 450px !important;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .service-post img {
+    min-width: none;
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .product-custom-item-block {
+    display: none;
+    visibility: hidden;
+  }
+}

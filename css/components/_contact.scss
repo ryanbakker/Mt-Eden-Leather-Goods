@@ -1,0 +1,87 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+.contact-page-heading {
+  padding-left: 8%;
+  padding-top: 50px;
+
+  div {
+    font-family: $overpass;
+    h4 {
+      font-weight: 500;
+      padding-top: 6px;
+      padding-bottom: 1px;
+    }
+
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+.contact-page-group {
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: 80px;
+
+  div {
+    // margin-left: auto;
+    // margin-right: auto;
+
+    .wp-block-columns {
+      width: 100%;
+      gap: 5em;
+
+      h2 {
+        font-family: $alumni;
+        font-weight: 500;
+        padding-bottom: 1px;
+        font-size: 2.5em;
+      }
+
+      p {
+        padding-bottom: 20px;
+        font-family: $overpass;
+        font-weight: 300;
+        font-size: 1.1em;
+      }
+
+      h5 {
+        padding-top: 10px;
+        padding-bottom: 6px;
+        font-family: $overpass;
+        font-weight: 500;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+h2.contact-page-social-heading {
+  font-family: $alumni;
+  font-weight: 500;
+  font-size: 2.5em;
+  padding-bottom: 1px;
+}
+
+div.contact-page-social-icons {
+  height: 60px;
+  margin-bottom: 90px;
+  column-gap: 1rem;
+
+  i {
+    font-size: 1.6em;
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(98, 98, 98);
+      transition: 0.2s;
+    }
+  }
+}
+
+.opacity-img {
+  img {
+    opacity: 0.15;
+  }
+}

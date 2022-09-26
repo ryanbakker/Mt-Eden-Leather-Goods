@@ -1,0 +1,59 @@
+@use "abstracts/fonts" as *;
+@use "abstracts/colours" as *;
+@use "components/header";
+@use "components/footer";
+@use "components/front-page";
+@use "components/popup";
+@use "components/columns";
+@use "components/products";
+@use "components/policies";
+@use "components/forms";
+@use "components/contact";
+@use "components/about";
+@use "components/services";
+@use "components/search";
+@use "components/comments";
+@use "components/queries";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+h1 {
+  padding-top: 6%;
+  font-family: $alumni;
+  font-size: 3.2em;
+  font-weight: 500;
+  color: $dk-grey;
+}
+
+.front-page-blocks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.push-title {
+  padding-left: 8%;
+}
+
+.purchase {
+  padding-left: 8%;
+
+  h2 {
+    max-width: 500px;
+  }
+}

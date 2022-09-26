@@ -1,0 +1,191 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+header {
+  .desktop-navbar {
+    background-color: $dk-grey;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 20px 50px;
+    overflow: hidden;
+
+    img {
+      height: 50px;
+    }
+
+    ul {
+      display: flex;
+      margin-left: auto;
+      gap: 30px;
+      list-style-type: none;
+
+      li.menu-item {
+        a {
+          text-decoration: none;
+          color: #ffffff;
+          font-family: $alumni;
+          font-weight: 400;
+          padding: 1.8px 0;
+          font-size: 1.4em;
+          display: inline-block;
+          vertical-align: middle;
+          transform: perspective(1px) translateZ(0);
+          position: relative;
+          overflow: hidden;
+
+          //   Top animation
+
+          &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 51%;
+            right: 51%;
+            top: 0;
+            background: #ffffff;
+            height: 1px;
+            border-radius: 10%;
+            transition-property: left, right;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+          }
+          &:hover:before,
+          &:focus:before,
+          &:active:before {
+            left: 0;
+            right: 0;
+          }
+
+          //   Bottom animaton
+
+          &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 51%;
+            right: 51%;
+            bottom: 0;
+            background: #ffffff;
+            height: 1px;
+            border-radius: 10%;
+            transition-property: left, right;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+          }
+
+          &:hover:after,
+          &:focus:after,
+          &:active:after {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+
+      li.current-menu-item {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
+.front-page {
+  .front-page-banner {
+    height: 91vh;
+    width: 100%;
+    // background-color: rgba(49, 49, 49, 0.5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    video {
+      width: auto;
+      height: 115vh;
+      position: absolute;
+      top: -185px;
+      z-index: -5;
+      transform: translateX(0%);
+    }
+
+    .banner-content {
+      min-width: 600px;
+      min-height: 400px;
+      margin-top: -60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 40px;
+
+      img {
+        height: clamp(5em, 14vw, 8em);
+      }
+
+      p {
+        max-width: 520px;
+        text-align: center;
+        color: #ffffff;
+        font-family: $overpass;
+        font-weight: 300;
+        font-size: 1.3em;
+      }
+
+      .banner-content-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        a {
+          text-decoration: none;
+          padding: 9px 40px;
+          border: 1px solid white;
+
+          font-weight: 400;
+          font-size: 1em;
+        }
+
+        /* Shutter Out Horizontal */
+        .hvr-shutter-out {
+          display: inline-block;
+          vertical-align: middle;
+          transform: perspective(1px) translateZ(0);
+          position: relative;
+          background: transparent;
+          transition-property: color;
+          transition-duration: 0.3s;
+          color: #ffffff;
+          font-family: $overpass;
+        }
+        .hvr-shutter-out:before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #ffffff;
+          transform: scaleX(0);
+          transform-origin: 50%;
+          transition-property: transform;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+        }
+        .hvr-shutter-out:hover,
+        .hvr-shutter-out:focus,
+        .hvr-shutter-out:active {
+          color: $dk-grey;
+        }
+        .hvr-shutter-out:hover:before,
+        .hvr-shutter-out:focus:before,
+        .hvr-shutter-out:active:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}

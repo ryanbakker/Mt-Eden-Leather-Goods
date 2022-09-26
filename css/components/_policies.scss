@@ -1,0 +1,25 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+.privacy-policy-content {
+  max-width: 1000px;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: 3%;
+  font-family: $overpass;
+  padding-bottom: 80px;
+
+  h3 {
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  p {
+    font-weight: 300;
+    padding-top: 3px;
+    padding-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}

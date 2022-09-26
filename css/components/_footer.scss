@@ -1,0 +1,81 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+footer {
+  min-height: 140px;
+  width: 100%;
+  background-color: $dk-grey;
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+
+  .footer-logo {
+    img {
+      height: 4rem;
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    margin-left: auto;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 8px;
+      max-width: 550px;
+      justify-content: right;
+
+      li {
+        a {
+          color: #ffffff;
+          text-decoration: none;
+          font-family: $overpass;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      form#searchform {
+        input#s {
+          padding: 5px 10px;
+          min-width: 30%;
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid #ffffff;
+          font-family: $overpass;
+          color: #ffffff;
+          font-size: 1em;
+          background-color: $dk-grey;
+          max-width: 140px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        input#searchsubmit {
+          padding: 5px 20px;
+          margin-left: 15px;
+          font-family: $overpass;
+          background-color: #ffffff;
+          border: none;
+          color: $dk-grey;
+          font-weight: 400;
+          font-size: 0.8em;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #505050;
+            transition: 0.2s ease;
+          }
+        }
+      }
+    }
+  }
+}

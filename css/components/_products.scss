@@ -1,0 +1,183 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+p.products-description {
+  font-family: $overpass;
+  font-weight: 300;
+  margin-left: 8%;
+  padding-top: 5px;
+  max-width: 425px;
+}
+
+.products-list {
+  width: 100%;
+  padding: 50px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  .product {
+    a {
+      text-decoration: none;
+      color: $dk-grey;
+
+      img {
+        width: 100%;
+        max-width: 280px;
+        min-width: 150px;
+        height: auto;
+      }
+
+      h3 {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-family: $alumni;
+        font-weight: 500;
+        font-size: 1.8em;
+      }
+
+      h5 {
+        font-family: $alumni;
+        font-weight: 500;
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+// Single product page styling
+
+.single-product {
+  padding-left: 8%;
+  padding-right: 8%;
+
+  h2 {
+    font-family: $alumni;
+    font-size: 3.2em;
+    font-weight: 500;
+    color: $dk-grey;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+
+  h3.product-price {
+    padding-bottom: 1rem;
+  }
+
+  .purchase-btn button {
+    text-decoration: none;
+    color: #fff;
+    background-color: $dk-grey;
+    padding: 8px 40px;
+    border: none;
+    font-family: $overpass;
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  .product-gutenberg-content {
+    p {
+      font-family: $overpass;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      color: $dk-grey;
+      margin-top: 0;
+      margin-bottom: 0px;
+      max-width: 570px;
+      padding-bottom: 40px;
+    }
+
+    h5 {
+      padding-bottom: 20px;
+      padding-top: 0px;
+      font-family: $alumni;
+      font-size: 1.7em;
+      color: $dk-grey;
+      font-weight: 400;
+    }
+  }
+}
+
+.product-custom-item-block {
+  max-width: 1125px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 100px;
+  padding-bottom: 100px;
+
+  .product-custom-item-block-text {
+    h3 {
+      font-family: $alumni;
+      font-size: 2.7em;
+      color: $dk-grey;
+      font-weight: 400;
+    }
+    p {
+      padding-top: 8px;
+      padding-bottom: 0;
+      max-width: 350px;
+      font-family: $overpass;
+      font-size: 1.2em;
+      color: $dk-grey;
+      font-weight: 300;
+      line-height: 1.5em;
+    }
+
+    a {
+      margin-top: 20px;
+      padding: 7px 35px;
+      text-decoration: none;
+      font-family: $overpass;
+      font-weight: 400;
+      font-size: 1em;
+      display: inline-block;
+      vertical-align: middle;
+      transform: perspective(1px) translateZ(0);
+      position: relative;
+      background: transparent;
+      transition-property: color;
+      transition-duration: 0.3s;
+      font-family: $overpass;
+      color: $dk-grey !important;
+      border: 1.6px solid $dk-grey;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #ffffff;
+        background: $dk-grey;
+        transform: scaleX(0);
+        transform-origin: 50%;
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #ffffff !important;
+      }
+
+      &:hover:before,
+      &:focus:before,
+      &:active:before {
+        transform: scaleX(1);
+        color: #ffffff;
+      }
+    }
+  }
+
+  .product-custom-item-block-images {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 20px;
+  }
+}

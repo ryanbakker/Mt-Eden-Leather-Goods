@@ -1,0 +1,47 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+.mailpoet_form form h2.mailpoet-heading {
+  font-family: $alumni !important;
+  font-size: 3em !important;
+  font-weight: 400 !important;
+  color: $dk-grey !important;
+  padding-bottom: 20px !important;
+}
+
+.mailpoet_form p,
+.mailpoet_form p span {
+  font-size: 1em !important;
+  line-height: 1em !important;
+  font-family: $overpass !important;
+  font-weight: 300 !important;
+  color: $dk-grey !important;
+  padding-top: 0 !important;
+}
+
+.mailpoet_form p {
+  padding-bottom: 20px !important;
+}
+
+.mailpoet_form {
+  max-width: 450px !important;
+  min-height: 55vh !important;
+}
+
+div .mailpoet_submit {
+  font-family: $overpass !important;
+  font-weight: 300 !important;
+  border: 1.5px solid $dk-grey;
+  border-color: $dk-grey;
+  background-color: $dk-grey !important;
+  color: #ffffff !important;
+
+  &:hover {
+    background-color: #ffffff !important;
+    color: $dk-grey !important;
+    border: 1.5px solid $dk-grey !important;
+    border-color: $dk-grey !important;
+    cursor: pointer !important;
+    transition: 0.2s ease !important;
+  }
+}

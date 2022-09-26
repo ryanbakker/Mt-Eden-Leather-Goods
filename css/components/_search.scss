@@ -1,0 +1,182 @@
+@use "../abstracts/fonts" as *;
+@use "../abstracts/colours" as *;
+
+.search-page {
+  padding-left: 8%;
+
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    font-family: $overpass;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding-bottom: 30px;
+
+    span {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+
+  form {
+    input#s {
+      padding: 5px 10px;
+      min-width: 30%;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $dk-grey;
+      font-family: $overpass;
+      color: $dk-grey;
+      font-size: 1em;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input#searchsubmit {
+      padding: 5px 20px;
+      margin-left: 15px;
+      font-family: $overpass;
+      background-color: $dk-grey;
+      border: none;
+      color: #ffffff;
+      font-weight: 300;
+      font-size: 0.8em;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #505050;
+        transition: 0.2s ease;
+      }
+    }
+  }
+
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-bottom: 100px;
+    padding-right: 8%;
+
+    .search-item {
+      border-bottom: 0.8px solid $dk-grey;
+      padding-bottom: 30px;
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+
+      div {
+        max-width: 730px;
+        color: $dk-grey;
+
+        h5 {
+          font-family: $alumni;
+          font-size: 1.5em;
+          font-weight: 500;
+          padding-bottom: 2px;
+        }
+
+        p {
+          font-family: $overpass;
+          font-size: 1em;
+          font-weight: 300;
+          padding-bottom: 4px;
+        }
+
+        div a {
+          color: $dk-grey;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      div.search-item-img {
+        img {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.page-not-found {
+  padding-left: 8%;
+  padding-right: 8%;
+
+  h2 {
+    padding-bottom: 30px;
+  }
+
+  .page-not-found-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    p {
+      font-family: $overpass;
+      font-weight: 300;
+      font-size: 1.1em;
+    }
+
+    h4 {
+      margin-top: 50px;
+      padding-bottom: 15px;
+    }
+
+    h4 a {
+      font-family: $overpass;
+      font-size: 1em;
+      font-weight: 500;
+      color: $dk-grey;
+      text-decoration: none;
+
+      i {
+        font-size: 0.75em;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    form {
+      input#s {
+        padding: 5px 10px;
+        min-width: 30%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $dk-grey;
+        font-family: $overpass;
+        color: $dk-grey;
+        font-size: 1em;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input#searchsubmit {
+        padding: 5px 20px;
+        margin-left: 15px;
+        font-family: $overpass;
+        background-color: $dk-grey;
+        border: none;
+        color: #ffffff;
+        font-weight: 300;
+        font-size: 0.8em;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #505050;
+          transition: 0.2s ease;
+        }
+      }
+    }
+  }
+}
